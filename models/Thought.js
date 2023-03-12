@@ -31,14 +31,14 @@ const thoughtSchema = new Schema(
   }
 );
 
-// create the Thought model using the thoughtSchema
-const Thought = model('thought', thoughtSchema);
-
 // get total count of reactions
 thoughtSchema
   .virtual('reactionCount')
   .get(function(){
     return this.reactions.length
 });
+
+// create the Thought model using the thoughtSchema
+const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;

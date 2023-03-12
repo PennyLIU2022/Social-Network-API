@@ -38,7 +38,7 @@ const userSchema = new Schema(
 );
 
 // create the User model using the userSchema
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 // get total count of friends
 userSchema
